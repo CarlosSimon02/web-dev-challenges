@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: calc(28px + (40 - 28) * ((100vw - 375px) / (1440 - 375)));
+    margin-bottom: calc(32px + (55 - 32) * ((100vw - 375px) / (1440 - 375)));
+
+    & .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 60%;
+    }
+
+    &__logo {
+        display: inline-block;
+        height: inherit;
+    }
+
+    &__menu-icon {
+        display: block;
+        margin-left: auto;
+
+        @media (min-width: $breakpoint-tablet) {
+            display: none;
+        }
+    }
+
+    &__menu-mobile {
+        display: none;
+        position: fixed;
+        padding: 28px;
+        height: 100vh;
+        width: 256px;  
+        top: 0;
+        right: 0;
+        background-color: $color-white;
+        text-align: right;
+
+        &__close {
+            display: inline-block;
+            margin-bottom: 90px;
+        }
+
+        & nav {
+            text-align: left;
+            
+        }
+
+        & li {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__menu-desktop {
+        display: none;
+
+        @media (min-width: $breakpoint-tablet) {
+            display: flex;
+            margin-left: auto;
+            gap: 40px;
+        }
+    }
+}

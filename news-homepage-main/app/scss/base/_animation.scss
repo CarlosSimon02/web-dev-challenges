@@ -1,0 +1,19 @@
+@keyframes entrance{
+    from {
+        right: -256px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes exit {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -256px;
+    }
+}

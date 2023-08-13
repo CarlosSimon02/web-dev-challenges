@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after,
+*::placeholder {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: $font-space-mono;
+    font-weight: 700;
+}
+
+body {
+    background-color: $color-light-grayish-cyan;
+}

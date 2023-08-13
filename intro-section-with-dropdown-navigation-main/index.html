@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__logo" src="images/logo.svg">
+    <svg class="header__menu-icon" id="menu-icon" width="32" height="18" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#151515" fill-rule="evenodd">
+        <path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z" />
+      </g>
+    </svg>
+    <div class="overlay" id="overlay">
+      <div class="header__content-mobile" id="menu-mobile">
+        <nav class="header__content-mobile__menu">
+          <svg class="close-icon" id="close-icon" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#151515" fill-rule="evenodd">
+              <path d="m2.393.98 22.628 22.628-1.414 1.414L.979 2.395z" />
+              <path d="M.98 23.607 23.609.979l1.414 1.414L2.395 25.021z" />
+            </g>
+          </svg>
+          <li><a id="features-mobile" class="dropdown-head"
+              onclick="dropdown('features-list-mobile','features-mobile-arrow')">Features <img id="features-mobile-arrow" src="./images/icon-arrow-down.svg"></a></li>
+          <div class="dropdown" id="features-list-mobile">
+            <li><a href=""><img src="./images/icon-todo.svg"><span>Todo List</span></a></li>
+            <li><a href=""><img src="./images/icon-calendar.svg"><span>Calendar</span></a></li>
+            <li><a href=""><img src="./images/icon-reminders.svg"><span>Reminder</span></a></li>
+            <li><a href=""><img src="./images/icon-planning.svg"><span>Planning</span></a></li>
+          </div>
+          <li><a id="company-mobile" class="dropdown-head"
+              onclick='dropdown("company-list-mobile","company-mobile-arrow")'>Company <img id="company-mobile-arrow" src="./images/icon-arrow-down.svg"></a></li>
+          <div class="dropdown" id="company-list-mobile">
+            <li><a href="">History</a></li>
+            <li><a href="">Our Team</a></li>
+            <li><a href="">Blog</a></li>
+          </div>
+          <li><a href="">Careers</a></li>
+          <li><a href="">About</a></li>
+        </nav>
+        <nav class="header__content-mobile__form">
+          <li><a href="">Login</a></li>
+          <li><a class="register" href="">Register</a></li>
+        </nav>
+      </div>
+    </div>
+    <div class="header__content-desktop">
+      <nav class="header__content-desktop__menu">
+        <li><a id="features-desktop" class="dropdown-head"
+            onclick='dropdown("features-list-desktop","features-desktop-arrow")'>Features <img id="features-desktop-arrow" src="./images/icon-arrow-down.svg"></a></li>
+        <div class="dropdown dropdown-desktop" id="features-list-desktop">
+          <li><a href=""><img src="./images/icon-todo.svg"><span>Todo List</span></a></li>
+          <li><a href=""><img src="./images/icon-calendar.svg"><span>Calendar</span></a></li>
+          <li><a href=""><img src="./images/icon-reminders.svg"><span>Reminder</span></a></li>
+          <li><a href=""><img src="./images/icon-planning.svg"><span>Planning</span></a></li>
+        </div>
+        <li><a id="company-desktop" class="dropdown-head"
+            onclick='dropdown("company-list-desktop","company-desktop-arrow")'>Company <img id="company-desktop-arrow" src="./images/icon-arrow-down.svg"></a></li>
+        <div class="dropdown dropdown-desktop" id="company-list-desktop">
+          <li><a href="">History</a></li>
+          <li><a href="">Our Team</a></li>
+          <li><a href="">Blog</a> </li>
+        </div>
+        <li><a href="">Careers</a></li>
+        <li><a href="">About</a></li>
+      </nav>
+      <nav class="header__content-desktop__form">
+        <li><a href="">Login</a></li>
+        <li><a class="register" href="">Register</a></li>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <img class="main__hero" src="images/image-hero-mobile.png">
+    <section class="main__content">
+      <h1 class="main__content__title">Make remote work</h1>
+      <p class="main__content__desc">Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.</p>
+      <a class="main__content__cta" href="">Learn more</a>
+      <div class="main__content__client">
+        <img src="images/client-databiz.svg">
+        <img src="images/client-audiophile.svg">
+        <img src="images/client-meet.svg">
+        <img src="images/client-maker.svg">
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

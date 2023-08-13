@@ -1,0 +1,172 @@
+body {
+    font-family: $body-font;
+    font-size: .9375rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1rem;
+    }
+
+    @media (min-width: $breakpoint-desktop-small) {
+        font-size: 1.125rem;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    font-family: $header-font;
+}
+
+.header {
+    font-size: .80rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1rem;
+    }
+}
+
+.main {
+    &__first-content__text {
+        text-align: center;
+
+        @media (min-width: $breakpoint-desktop-large) {
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+
+            @media (min-width: $breakpoint-desktop-small) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .text {
+            color: $main-font-color;
+        }
+
+        & p {
+            line-height: 1.5rem;
+        }
+
+        & h1,
+        & p,
+        & div {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__second-content__text {
+        text-align: center;
+
+        @media (min-width: $breakpoint-desktop-large) {
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 1rem;
+            color: $main-font-color;
+
+            @media (min-width: $breakpoint-tablet) {
+                font-size: 1.25rem;
+            }
+
+            @media (min-width: $breakpoint-desktop-small) {
+                font-size: 2.5rem;
+            }
+        }
+
+        >p {
+            line-height: 1.5rem;
+            color: $header-font-color;
+            text-align: left;
+        }
+
+        &>h2,
+        &>p,
+        &>a,
+        &>article {
+            margin-bottom: 25px;
+        }
+
+        &__comment {
+            font-size: .625rem;
+            font-weight: 500;
+            line-height: 1rem;
+            color: $main-font-color;
+
+            @media (min-width: $breakpoint-tablet) {
+                font-size: .875rem;
+                line-height: 1.50rem;
+            }
+
+            &__profile {
+                line-height: 1rem;
+
+                #name {
+                    font-size: .875rem;
+                    font-weight: bold;
+                }
+
+                #position {
+                    font-size: 8px;
+
+                    @media (min-width: $breakpoint-tablet) {
+                        font-size: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.footer {
+
+    &__cta {
+        text-align: center;
+
+        @media (min-width: $breakpoint-desktop-large) {
+            text-align: left;
+        }
+
+        &__text {
+            color: $main-second-content-bg-color;
+
+            & h3 {
+                font-size: 1.25rem;
+                margin-bottom: 15px;
+
+                @media (min-width: $breakpoint-tablet) {
+                    font-size: 1.50rem;
+                }
+
+                @media (min-width: $breakpoint-tablet) {
+                    font-size: 1.50rem;
+                }
+
+                @media (min-width: $breakpoint-desktop-small) {
+                    font-size: 2.25rem;
+                }
+            }
+
+            & p {
+                line-height: 1.5rem;
+                font-size: .875rem;
+
+                @media (min-width: $breakpoint-tablet) {
+                    font-size: 1rem;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+    }
+
+    & h3,
+    & div,
+    & a {
+        color: white;
+    }
+
+}

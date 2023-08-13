@@ -1,0 +1,56 @@
+.header__menu a {
+    color: $main-font-color;
+
+    &:active {
+        color: $header-font-color;
+    }
+}
+
+.main__second-content__text {
+    &__link {
+        & a {
+            display: inline-block;
+            color: $main-link-color;
+            padding-bottom: 5px;
+            border-bottom: 2px solid;
+            border-color: $main-link-color;
+            margin-bottom: 40px;
+    
+            & span {
+                font-weight: 500;
+            }
+    
+            & svg {
+                display: inline-block;
+                margin-left: 7px;
+                width: 12px;
+                height: auto;
+    
+                & path {
+                    fill: $main-link-color;
+                }
+            }
+        }
+    }
+
+    &__link:active {
+        & a {
+            color: $main-link-active-color;
+            border-color: $main-link-active-color;
+        }
+
+        & path {
+            fill: $main-link-active-color;
+        }
+    }
+}
+
+.footer {
+    & a:active {
+        color: $button-active-fill-color;
+    }
+
+    & svg:active{
+        fill: $button-active-fill-color;
+    }
+}

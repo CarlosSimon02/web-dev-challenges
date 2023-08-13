@@ -1,0 +1,143 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+    &__first-content {
+        background-image: url("../images/bg-curve-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% auto;
+
+        @media (min-width: $breakpoint-tablet) {
+            background-image: url("../images/bg-curve-desktop.svg");
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 24px;
+            padding: 98px 0 118px 0;
+            align-items: center;
+            justify-content: space-around;
+
+            @media (min-width: $breakpoint-tablet) {
+                 margin: 40px;
+                 margin-top: 0;
+            }
+
+            @media (min-width: $breakpoint-desktop-small) {
+                padding: 0 0 118px 0;
+                margin: 80px;
+                margin-top: 0;
+            }
+
+            @media (min-width: $breakpoint-desktop-large) {
+                flex-direction: row;
+                justify-content: space-between;
+           }
+        }
+        
+        &__illustration {
+            width: 80%;
+            height: auto;
+
+            @media (min-width: $breakpoint-desktop-small) {
+                width: 400px;
+            }
+
+            @media (min-width: $breakpoint-desktop-large) {
+                width: 48%;
+                order: 2;
+            }
+        }
+
+        &__text {
+            @media (min-width: $breakpoint-desktop-large){
+                width: 48%;
+            }
+        }
+    }
+
+    &__second-content {
+        width: 100vw;
+        height: auto;
+        background-color: #F8F8FE;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            align-items: center;
+
+            @media (min-width: $breakpoint-tablet) {
+                margin: 40px;
+            }
+
+            @media (min-width: $breakpoint-desktop-small) {
+                margin: 80px;
+            }
+
+            @media (min-width: $breakpoint-desktop-large) {
+                flex-direction: row;
+                justify-content: space-between;
+           }
+        }
+
+        &__illustration {
+            width: 80%;
+            height: auto;
+            margin: 50px 0 83px 0;
+
+            @media (min-width: $breakpoint-desktop-small) {
+                width: 400px;
+            }
+
+            @media (min-width: $breakpoint-desktop-large) {
+                width: 48%;
+                order: 2;
+           }
+        }
+        
+            &__text {
+                @media (min-width: $breakpoint-desktop-large){
+                    width: 48%;
+                }
+
+            &__comment {
+                display: inline-block;
+                background-color: white;
+                width: 280px;
+                height: auto;
+                box-shadow: 0 0 10px rgb(208, 208, 208);
+
+                @media (min-width: $breakpoint-tablet) {
+                    width: 356px;
+                }
+                
+                &__wrapper {
+                    margin: 26px;
+                    text-align: left;
+
+                    @media (min-width: $breakpoint-tablet) {
+                        margin: 33px;
+                    }
+                    
+                }
+
+                &__profile {
+                    display: flex;
+                    column-gap: 5px;
+                    height: auto;
+                    align-items: center;
+
+                    & > img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

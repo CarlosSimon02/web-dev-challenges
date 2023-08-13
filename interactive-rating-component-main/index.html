@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <article class="card">
+
+    <!-- Rating state start -->
+    <div class="card__rating-state" id="rating-state">
+      <div class="card__rating-state__star">
+        <img src="images/icon-star.svg" alt="star">
+      </div>
+      <h1 class="card__rating-state__title">How did we do?</h1>
+      <p class="card__rating-state-desc">Please let us know how we did with your support request. All feedback is
+        appreciated
+        to help us improve our offering!</p>
+      <h2 class="card__rating-state__pop-up" id="pop-up">Plase select an input</h2>
+      <nav class="card__rating-state__select">
+        <li class="option" id="1" value="1" onclick="setRate(1)">1</li>
+        <li class="option" id="2" value="2" onclick="setRate(2)">2</li>
+        <li class="option" id="3" value="3" onclick="setRate(3)">3</li>
+        <li class="option" id="4" value="4" onclick="setRate(4)">4</li>
+        <li class="option" id="5" value="5" onclick="setRate(5)">5</li>
+      </nav>
+      <a class="card__rating-state__btn" id="submit-btn" onclick="submitRate()">SUBMIT</a>
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="card__ty-state" id="ty-state">
+      <img class="card__ty-state__img" src="images/illustration-thank-you.svg">
+      <h2 class="card__ty-state__rate-submitted" id="selected"></h2>
+      <h1 class="card__ty-state__title">Thank you!</h1>
+      <p class="card__ty-state-desc">We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+    <!-- Thank you state end -->
+
+  </article>
+</body>
+
+</html>

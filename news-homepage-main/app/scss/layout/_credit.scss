@@ -1,0 +1,14 @@
+footer {
+    margin-top: 64px;
+    font-size: .8rem;
+    text-align: center;
+
+    & a {
+        color: $color-dark-blue;
+        font-weight: 800;
+
+        &:active {
+            color: $color-orange;
+        }
+    }
+}

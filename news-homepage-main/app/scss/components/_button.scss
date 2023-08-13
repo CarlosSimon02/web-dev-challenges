@@ -1,0 +1,15 @@
+.button {
+    display: inline-block;
+    line-height: 48px;
+    text-align: center;
+    width: 185px;
+    height: 48px;
+    background-color: $color-orange;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 4px;
+
+    &:active {
+        background-color: $color-dark-blue;
+    }
+}

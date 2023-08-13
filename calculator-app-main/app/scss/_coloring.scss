@@ -1,0 +1,86 @@
+.bg1 {
+    background-color: var(--color-main-bg);
+    transition: background-color .5s;
+}
+
+.bg2 {
+    background-color: var(--color-toggle-keypad-bg);
+    transition: background-color .5s;
+}
+
+.bg3 {
+    background-color: var(--color-scr-bg);
+    color: var(--color-txt-header);
+    transition: background-color .5s,
+                color .5s;
+}
+
+.btn1 {
+    background-color: var(--color-equal-key);
+    transition: background-color .5s;
+
+    .toggle:hover>& {
+        background-color: var(--color-equal-key-hover);
+        transition: background-color .5s;
+    }
+
+}
+
+.btn2 {
+    background-color: var(--color-other-key);
+    box-shadow: 0 4px var(--color-other-key-shadow);
+    color: var(--color-txt-other);
+    transition: background-color .5s,
+        box-shadow .5s,
+        color .5s;
+
+    &:hover {
+        background-color: var(--color-other-key-hover);
+        transition: background-color .5s;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.btn3 {
+    background-color: var(--color-del-reset-key);
+    box-shadow: 0 4px var(--color-del-reset-key-shadow);
+    color: var(--color-txt-del-reset);
+    transition: background-color .5s,
+        box-shadow .5s,
+        color .5s;
+
+    &:hover {
+        background-color: var(--color-del-reset-key-hover);
+        transition: background-color .5s;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.btn4 {
+    background-color: var(--color-equal-key);
+    box-shadow: 0 4px var(--color-equal-key-shadow);
+    color: var(--color-txt-equal);
+    transition: background-color .5s, 
+                box-shadow .5s, 
+                color .5s;
+
+    &:hover {
+        background-color: var(--color-equal-key-hover);
+        transition: background-color .5s;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.txt1 {
+    color: var(--color-txt-header);
+    transition: color .5s;
+}

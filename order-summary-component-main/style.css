@@ -1,0 +1,195 @@
+:root {
+    --bg-color: hsl(225, 100%, 94%);
+    --blur-color: hsl(230, 100%, 90%);
+    --container-content-color: hsl(0, 0%, 100%);
+    --wrapper-pricing-bg-color: hsl(225, 100%, 98%);
+    --container-content-width: 328px;
+    --container-content-height: 568px;
+    --container-content-border-radius: 15px;
+    --proceed-bg-color: hsl(245, 75%, 52%);
+    --proceed-active-bg-color: hsl(262, 75%, 52%);
+    --text-color-darkblue: hsl(223, 47%, 23%);
+    --text-color-desturatedblue: hsl(224, 23%, 55%);
+}
+
+body {
+    background-color: var(--bg-color);
+    width: 450px;
+    color: var(--text-color-desturatedblue);
+}
+
+.bg-pattern > img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 450px;
+    height: 50%;
+}
+
+.container-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-content-color);
+    width: var(--container-content-width);
+    height: var(--container-content-height);
+    border-radius: var(--container-content-border-radius);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-height:568px) {
+    .container-content {
+        top: 0;
+        transform:translate(-50%,0);
+    }
+}
+
+#image-hero {
+    width: var(--container-content-width);
+    height: 160px;
+    border-top-left-radius: var(--container-content-border-radius);
+    border-top-right-radius: var(--container-content-border-radius);
+}
+
+.order-summary {
+    display: flex;
+    height: 408px;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 25px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color-desturatedblue);
+}
+
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0px;
+}
+
+.order-summary > p {
+    margin: 0px;
+    line-height: 1.7rem;
+}
+
+h1, .chosen-plan > span {
+    color: var(--text-color-darkblue);
+}
+
+.wrapper-pricing {
+    height: 82px;
+    background-color: var(--wrapper-pricing-bg-color);
+}
+
+.container-pricing {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    text-align: left;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: .85rem;
+}
+
+.chosen-plan {
+    line-height: 21px
+}
+
+#icon-music {
+    width: 60px;
+}
+
+#change-link {
+    margin-left: auto;
+}
+
+.chosen-plan > span {
+    font-weight: 900;
+}
+
+.wrapper-pricing a {
+    font-weight: 700;
+    color: var(--proceed-bg-color);
+}
+
+.wrapper-pricing a:active {
+    color: var(--proceed-active-bg-color);
+    text-decoration: none;
+}
+
+.wrapper-pricing, .proceed > a {
+    border-radius: 10px;
+}
+
+.decide-button {
+    font-size: .85rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.decide-button > a {
+    text-decoration: none;
+}
+
+.proceed > a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: var(--container-content-color);
+    background-color: var(--proceed-bg-color);
+    box-shadow: 0px 15px 15px var(--blur-color);
+}
+
+.proceed > a:active {
+    background-color: var(--proceed-active-bg-color);
+}
+
+.cancel > a {
+    color: var(--text-color-desturatedblue);
+}
+
+.cancel > a:active {
+    color: var(--text-color-darkblue);
+}
+
+@media (min-width: 450px) {
+    .bg-pattern > img {
+        content: url("images/pattern-background-desktop.svg");
+        width: 100%;
+    }
+
+    .container-content {
+        --container-content-width: 450px;
+        --container-content-height: 698px;
+    }
+
+    #image-hero {
+        height: 220px;
+    }
+
+    .order-summary {
+        margin: 48px;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .container-pricing {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    @media (max-height: 698px) {
+        .container-content {
+            top: 0px;
+            transform: translate(-50%, 0);
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.header {
+
+    & a {
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:active {
+            color: $color-orange;
+
+            & g, & path {
+                fill: $color-orange;
+            }
+        }
+    }
+
+    &__menu-desktop {
+        & a {
+            color: $color-dark-gray;   
+        }
+    }
+
+    &__menu-mobile {
+        & a {
+            font-size: 1.125rem;
+            color: $color-dark-blue;
+        }
+    }
+}
+
+.main {
+    display: grid;
+    
+    &__recent-news {
+        & a {
+            color: $color-white;
+            font-size: 1.25rem;
+
+            &:active {
+                color: $color-gold;
+            }
+        }
+    }
+
+    &__top-news {
+        & a {
+            font-size: 1.125rem;
+            color: $color-dark-blue;
+
+            &:active {
+                color: $color-orange;
+            }
+        }
+    }
+}

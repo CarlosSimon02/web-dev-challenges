@@ -1,0 +1,29 @@
+@keyframes toggle-middle {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 22px;
+    }
+}
+
+@keyframes toggle-right {
+    from {
+        left: 22px;
+    }
+
+    to {
+        left: 44px;
+    }
+}
+
+@keyframes toggle-left {
+    from {
+        left: 44px;
+    }
+
+    to {
+        left: 0;
+    }
+}

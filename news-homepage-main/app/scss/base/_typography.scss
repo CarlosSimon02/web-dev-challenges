@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "interVF";
+    src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+    font-weight: 400 700 800;
+}
+
+body {
+    font-family: "interVF", $font-fallback;
+    font-weight: 400;
+    font-size: .9375rem;
+}
+
+p {
+    line-height: 1.75rem;
+}
+
+.main {
+    &__cover-news {
+        & > h1 {
+            font-size: calc(2.5rem + (56 - 40) * ((100vw - 375px) / (1440 - 375)));
+            font-weight: 800;
+            color: $color-dark-blue;
+        }
+
+        & > p {
+            color: $color-dark-gray;
+        }
+    }
+
+    &__recent-news {
+        & > h2 {
+            font-size: calc(2rem + (40 - 32) * ((100vw - 375px) / (1440 - 375)));
+            color: $color-gold;
+        }
+
+        & p, & hr {
+            color: $color-light-gray;
+        }
+    }
+
+    &__top-news {
+        & h2 {
+            font-size: 2rem;
+            color: $color-light-gray;
+        }
+
+        & p {
+            color: $color-dark-gray;
+        }
+    }
+}

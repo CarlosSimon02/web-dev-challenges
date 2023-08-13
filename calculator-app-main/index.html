@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./dist/style.css">
+  <script defer src="./app/js/script.js"></script>
+
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body class="bg1" data-theme="">
+  <article class="calc bg1">
+    <header class="calc__header">
+      <h1 class="calc__header__name txt1">calc</h1>
+      <div class="calc__header__theme">
+        <p class="calc__header__theme__selector-label txt1">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </p>
+        <p class="calc__header__theme__label txt1">THEME</p>
+        <div class="calc__header__theme__selector-toggle bg2 toggle" id="toggle" onclick="changeTheme()">
+          <div class="calc__header__theme__selector-toggle__button btn1" id="toggle-btn"></div>
+        </div>
+      </div>
+    </header>
+    <section class="calc__screen bg3" id="screen">0</section>
+    <section class="calc__keypad bg2">
+      <button class="btn2" onclick="typeChar(7)">7</button>
+      <button class="btn2" onclick="typeChar(8)">8</button>
+      <button class="btn2" onclick="typeChar(9)">9</button>
+      <button class="del_and_reset btn3" onclick="del()">DEL</button>
+      <button class="btn2" onclick="typeChar(4)">4</button>
+      <button class="btn2" onclick="typeChar(5)">5</button>
+      <button class="btn2" onclick="typeChar(6)">6</button>
+      <button class="btn2" onclick="typeChar('+')">+</button>
+      <button class="btn2" onclick="typeChar(1)">1</button>
+      <button class="btn2" onclick="typeChar(2)">2</button>
+      <button class="btn2" onclick="typeChar(3)">3</button>
+      <button class="btn2" onclick="typeChar('-')">-</button>
+      <button class="btn2" onclick="typeChar('.')">.</button>
+      <button class="btn2" onclick="typeChar(0)">0</button>
+      <button class="btn2" onclick="typeChar('/')">/</button>
+      <button class="btn2" onclick="typeChar('x')">x</button>
+      <button class="reset del_and_reset btn3" onclick="reset()">RESET</button>
+      <button class="equal btn4" onclick="equal()">=</button>
+    </section>
+  </article>
+</body>
+
+</html>

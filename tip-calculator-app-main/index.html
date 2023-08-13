@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calc__input__inputulator app</title>
+
+  <link rel="stylesheet" href="./dist/style.css">
+  <script defer src="./app/js/script.js"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="main-container__logo"><img src="images/logo.svg"></div>
+    <article class="main-container__calc">
+      <div class="main-container__calc__input">
+        <div class="main-container__calc__input__form__bill">
+          <p class="main-container__calc__input__form__bill__label label">Bill</p>
+          <input class="main-container__calc__input__form__bill__textbox interactive" id="bill-input" type="number" min="0" placeholder="0" onblur="setBill()" autocomplete="off">
+        </div>
+        <div class="main-container__calc__input__form__select-tip">
+          <p class="main-container__calc__input__form__select-tip__label label" for="tip-input">Select Tip %</p>
+          <div class="main-container__calc__input__form__select-tip__choices">
+            <div class="main-container__calc__input__form__select-tip__choices__item interactive" id="5%" onclick="setTip(5)">5%</div>
+            <div class="main-container__calc__input__form__select-tip__choices__item interactive" id="10%" onclick="setTip(10)">10%</div>
+            <div class="main-container__calc__input__form__select-tip__choices__item interactive" id="15%" onclick="setTip(15)">15%</div>
+            <div class="main-container__calc__input__form__select-tip__choices__item interactive" id="25%" onclick="setTip(25)">25%</div>
+            <div class="main-container__calc__input__form__select-tip__choices__item interactive" id="50%" onclick="setTip(50)">50%</div>
+            <input class="main-container__calc__input__form__select-tip__choices__item interactive" id="custom" type="number" min="0" placeholder="Custom" onclick="setTip('custom')" onblur="setTip('custom')" autocomplete="off"></label>
+          </div>
+        </div>
+        <div class="main-container__calc__input__form__people-num">
+          <p class="main-container__calc__input__form__people-num__label label">Number of People</p>
+          <p class="main-container__calc__input__form__bill__invalid invalid" id="people-num-invalid">Can't be zero</p>
+          <input class="main-container__calc__input__form__people-num__textbox interactive" id="people-num-input" type="number" min="0" placeholder="1" onfocus="focusPeopleNum()" onblur="setPeopleNum()" autocomplete="off">
+        </div>
+      </div>
+      <div class="main-container__calc__output">
+        <div class="main-container__calc__output__tip-amount">
+          <p class="main-container__calc__output__tip-amount__label">
+            Tip Amount
+            <br>
+            <span>/ person</span>
+          </p>
+          <h1 class="main-container__calc__output__tip-amount__value" id="tip-amount">$0.00</h1>
+        </div>
+        <div class="main-container__calc__output__total">
+          <p class="main-container__calc__output__total__label">
+            Total
+            <br>
+            <span>/ person</span>
+          </p>
+          <h1 class="main-container__calc__output__total__value" id="total">$0.00</h1>
+        </div>
+        <button class="main-container__calc__output__button-reset interactive" onclick="reset()">RESET</button>
+      </div>
+    </article>
+  </div>
+</body>
+
+</html>

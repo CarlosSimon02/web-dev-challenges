@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: calc(28px + (89 - 28) * ((100vw - 375px) / (1440 - 375))) calc(16px + (165 - 16) * ((100vw - 375px) / (1440 - 375)));
+
+    &.noscroll {
+        overflow: hidden;
+    };
+}
+
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,90 @@
+.footer {
+    
+    &__cta {
+        width: 100vw;
+        height: auto;
+        background-color: $header-font-color;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 38px;
+
+            @media (min-width: $breakpoint-desktop-large) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        &__text {
+            margin-bottom: 15px;
+            width: 42%;
+
+            @media (min-width: $breakpoint-desktop-large) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__log {
+            width: 38%;
+        }  
+    }
+
+    &__other-info {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 38px;
+        width: 100vw;
+        gap: 40px;
+        height: auto;
+        background-color: $main-font-color;
+
+        @media (min-width: $breakpoint-desktop-small) {
+            padding: 80px 38px;
+        }
+
+        & a{
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            gap: 45px;
+            justify-content: space-between;
+            
+            @media (min-width: $breakpoint-desktop-small) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            &__contacts {
+                display: flex;
+                flex-direction: column;
+
+                & div {
+                    display: flex;
+                    margin-bottom: 15px;
+                    
+                    & img {
+                        padding-right: 20px;
+                    }
+                }
+            }
+
+            &__social-media {
+                display: flex;
+                gap: 10px;
+                align-self: center;
+
+                @media(min-width: $breakpoint-desktop-small) {
+                    align-self: flex-start;
+                    width: 20vw;
+                }
+            }   
+        }
+    }
+}

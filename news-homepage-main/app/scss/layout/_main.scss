@@ -1,0 +1,79 @@
+.main {
+    display: grid;
+    gap: 64px;
+
+    @media (min-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 64px;
+        column-gap: $grid-gap;
+    } 
+
+    @media (min-width: $breakpoint-desktop) {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    &__cover-news { 
+        display: grid;  
+        gap: $grid-gap;
+
+        @media (min-width: $breakpoint-tablet) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-template-areas: "picture picture";
+            grid-template-rows: auto 1fr;
+        } 
+
+        &__pic {
+            width: 100%;
+
+            @media (min-width: $breakpoint-tablet) {
+                content: url("../assets/images/image-web-3-desktop.jpg");
+                grid-area: picture;
+            }
+        }
+    }
+
+    &__recent-news {
+        background-color: $color-dark-blue;
+        padding: calc(22px + (26 - 24) * ((100vw - 375px) / (1440 - 375)));
+        
+
+        & h2 {
+            margin-bottom: 2.25rem;
+        }
+
+        & h3 {
+            margin-bottom: .5rem;
+        }
+
+        & hr {
+            margin: 2rem 0;
+        }
+    }
+
+    &__top-news {
+        display: grid;
+        gap: $grid-gap;
+
+        @media (min-width:$breakpoint-desktop) {
+            grid-template-columns: repeat(3,1fr);
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        
+        &__item {
+            display: flex;
+            height: auto;
+            column-gap: 24px;
+
+            & img {
+                height: 127px;
+                align-self: center;
+            }
+
+            & h2, & h3 {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
