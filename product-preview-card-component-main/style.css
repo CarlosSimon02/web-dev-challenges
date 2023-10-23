@@ -1,5 +1,6 @@
 :root {
     --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-primary-700: hsl(158, 36%, 20%);
     --clr-secondary-200: hsl(30, 38%, 92%);
 
     --clr-neutral-900: hsl(212, 21%, 14%);
@@ -7,7 +8,10 @@
     --clr-neutral-100: hsl(0, 0%, 100%);
 
     --fw-regular: 500;
-    --fw-regular: 700;
+    --fw-bold: 700;
+
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-accent: 'Fraunces', serif;
 }
 
 /* resets */
@@ -54,3 +58,94 @@ h6 {
 }
 
 /* utilities */
+
+body {
+    background-color: var(--clr-secondary-200);
+    font-family: var(--ff-primary);
+    color: var(--clr-neutral-400);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    align-items: center;
+}
+
+.accent-text {
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    line-height: 1;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+button {
+    padding: 1em;
+    line-height: 1;
+    border-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    border-radius: var(--border-radius);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr-primary-700)
+}
+
+/* product style */
+
+.product {
+    --border-radius: 8px;
+
+    min-width: 343px;
+    width: 343px;
+    margin: 0 auto;
+    background-color: var(--clr-neutral-100);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}   
+
+.product__content {
+    padding: 1.5rem;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.product__content__header {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.product__category {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: .4em;
+}
+
+.product__name {
+    color: var(--clr-neutral-900)
+}
+
+.product__description {
+    margin-bottom: 10px; 
+    font-size: .875rem;
+    line-height: 1.8;
+}
+
+.product__price {
+    color: var(--clr-primary-400);
+}
+
+.product__original-price {
+    text-decoration: line-through;
+}

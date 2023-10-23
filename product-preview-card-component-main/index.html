@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Product preview card component</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+    rel="stylesheet">
+</head> 
+
 <body>
-  <!--main tag for good practice. Every website should have it-->
   <main>
-    <!--Use article if content is self-contain or independent-->
     <article class="product">
       <picture>
-        <img>
+        <img src="images/image-product-mobile.jpg">
       </picture>
-      <p class="product__category">Perfume</p>
-      <h1 class="product__name">Gabrielle Essence Eau De Parfum</h1>
-      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-      Perfumer-Creator for the House of CHANEL.</p>
-      <div class="price_row">
-        <p class="product__price">$149.99</p>
-        <p class="product__original-price">$169.99</p>
+      <div class="product__content">
+        <div class="product__content__header">
+          <p class="product__category">Perfume</p>
+          <h1 class="product__name accent-text">Gabrielle Essence Eau De Parfum</h1>
+        </div>
+        <p class="product__description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+        <div class="price-row">
+          <p class="product__price accent-text">$149.99</p>
+          <p class="product__original-price">$169.99</p>
+        </div>
+        <button data-icon="shopping-cart">
+          <img src="images/icon-cart.svg" alt="☒">
+          Add to Cart
+        </button>
       </div>
-      <button>Add to Cart</button>
     </article>
   </main>
 </body>
+
 </html>
