@@ -76,7 +76,6 @@ main {
 .accent-text {
     font-size: 2rem;
     font-family: var(--ff-accent);
-    line-height: 1;
 }
 
 .price-row {
@@ -96,6 +95,7 @@ button {
     background-color: var(--clr-primary-400);
     color: var(--clr-neutral-100);
     border-radius: var(--border-radius);
+    font-weight: var(--fw-bold);
 }
 
 button:hover {
@@ -119,23 +119,10 @@ button:hover {
     display: grid;
 }
 
-@media only screen and (min-width: 620px) {
-    .product {
-        --width: 600px;
-        --padding: 2rem;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .product__content {
     padding: var(--padding);
     display: grid;
     row-gap: 1rem;
-}
-
-.product__content__header {
-    display: grid;
-    row-gap: 0.5rem;
 }
 
 .product__category {
@@ -145,11 +132,11 @@ button:hover {
 }
 
 .product__name {
-    color: var(--clr-neutral-900)
+    color: var(--clr-neutral-900);
+    line-height: 1;
 }
 
 .product__description {
-    margin-bottom: 10px; 
     line-height: 1.8;
 }
 
@@ -159,4 +146,20 @@ button:hover {
 
 .product__original-price {
     text-decoration: line-through;
+}
+
+@media only screen and (min-width: 620px) {
+    .product {
+        --width: 600px;
+        --padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product__content__header {
+        row-gap: 1rem;
+    }    
+
+    .product__description {
+        margin-bottom: 0px; 
+    }
 }
