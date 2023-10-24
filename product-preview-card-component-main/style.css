@@ -155,9 +155,9 @@ button:hover {
         grid-template-columns: 1fr 1fr;
     }
 
-    .product__content__header {
+    .product__content {
         row-gap: 1rem;
-    }    
+    }
 
     .product__description {
         margin-bottom: 0px; 
