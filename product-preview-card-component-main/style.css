@@ -61,6 +61,7 @@ h6 {
 
 body {
     background-color: var(--clr-secondary-200);
+    font-size: .875rem;
     font-family: var(--ff-primary);
     color: var(--clr-neutral-400);
 }
@@ -106,17 +107,28 @@ button:hover {
 
 .product {
     --border-radius: 8px;
+    --width: 343px;
+    --padding: 1.5rem;
 
-    min-width: 343px;
-    width: 343px;
+    min-width: var(--width);
+    width: var(--width);
     margin: 0 auto;
     background-color: var(--clr-neutral-100);
     border-radius: var(--border-radius);
     overflow: hidden;
-}   
+    display: grid;
+}
+
+@media only screen and (min-width: 620px) {
+    .product {
+        --width: 600px;
+        --padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 .product__content {
-    padding: 1.5rem;
+    padding: var(--padding);
     display: grid;
     row-gap: 1rem;
 }
@@ -138,7 +150,6 @@ button:hover {
 
 .product__description {
     margin-bottom: 10px; 
-    font-size: .875rem;
     line-height: 1.8;
 }
 
