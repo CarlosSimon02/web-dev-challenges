@@ -138,7 +138,7 @@ hr {
     background-color: var(--clr-card-bg);
     box-shadow: 0px 25px 50px var(--clr-card-shadow);
     display: grid;
-    row-gap: 1.5rem;
+    row-gap: 1.6rem;
     border-radius: 15px;
 }
 
