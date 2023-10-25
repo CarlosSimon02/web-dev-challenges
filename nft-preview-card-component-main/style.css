@@ -112,7 +112,7 @@ a:hover {
 .flex-box {
     display: flex;
     justify-content: space-between;
-    font-size: .9375rem;
+    font-size: 1rem;
 }
 
 .icon-text {
@@ -166,6 +166,7 @@ hr {
     display: inline-flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .nft__creator__pic {
