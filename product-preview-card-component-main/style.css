@@ -136,6 +136,10 @@ button:hover {
     line-height: 1;
 }
 
+.product__description {
+    line-height: 1.6;
+}
+
 .product__price {
     color: var(--clr-primary-400);
 }
