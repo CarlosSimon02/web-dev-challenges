@@ -122,7 +122,10 @@ a:hover {
 }
 
 hr {
+    background-color: var(--clr-line);
     color: var(--clr-line);
+    height: 1px;
+    border: 0;
 }
 
 /* nft*/
